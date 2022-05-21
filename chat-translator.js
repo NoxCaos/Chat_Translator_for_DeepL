@@ -210,7 +210,7 @@ function api_translation(elm, outputLang) {
         if (res.status == "200") {
           res.json().then((resData) => {
             //elm.textContent = resData.translations[0].text;
-            elm.innerHTML = resData.translations[0].text;
+            elm.innerHTML = `[${outputLang}] ${target_chat} -> ${resData.translations[0].text}`;
             console.log(
               "Original : " +
                 "(" +
